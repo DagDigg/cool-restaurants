@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { InstantSearch, Pagination } from "react-instantsearch-hooks-web";
+import { Content } from "./components/Content";
+import { Heading } from "./components/Heading";
+import { Hit } from "./components/Hit";
+import { Hits } from "./components/Hits";
+import { RefinementList } from "./components/RefinementList";
+import { SearchBox } from "./components/SearchBox";
+import { searchClient } from "./lib/algolia";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <InstantSearch searchClient={searchClient} indexName="interview_candidate">
+      <Heading>
+        <SearchBox />
+      </Heading>
+      <Content>
+        <RefinementList attribute="food_type" showMore={true} />
+        <Hits hitComponent={Hit} />
+      </Content>
+      <Pagination />
+    </InstantSearch>
   );
 }
 
