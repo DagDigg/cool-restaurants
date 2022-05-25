@@ -1,9 +1,10 @@
 import React from "react";
-import { InstantSearch, Pagination } from "react-instantsearch-hooks-web";
+import { InstantSearch } from "react-instantsearch-hooks-web";
 import { Content } from "./components/Content";
 import { Heading } from "./components/Heading";
 import { Hit } from "./components/Hit";
 import { Hits } from "./components/Hits";
+import { Pagination } from "./components/Pagination";
 import { RefinementList } from "./components/RefinementList";
 import { SearchBox } from "./components/SearchBox";
 import { searchClient } from "./lib/algolia";

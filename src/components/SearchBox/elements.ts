@@ -3,12 +3,15 @@ import styled from "styled-components";
 import { colors } from "../../theme";
 
 export const StyledSearchBox = styled(SearchBox)`
-  display: flex;
   input[type="search"]::-webkit-search-decoration,
   input[type="search"]::-webkit-search-cancel-button,
   input[type="search"]::-webkit-search-results-button,
   input[type="search"]::-webkit-search-results-decoration {
     appearance: none;
+  }
+
+  .ais-SearchBox-form {
+    display: flex;
   }
   .ais-SearchBox-input {
     appearance: none;
@@ -24,6 +27,7 @@ export const StyledSearchBox = styled(SearchBox)`
     &:active,
     &:focus {
       border: 2px solid ${colors.light.green1};
+      outline: none;
     }
     font-size: 22px;
     color: ${colors.light.green1};
