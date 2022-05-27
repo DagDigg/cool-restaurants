@@ -5,6 +5,7 @@ import { colors } from "../../theme";
 export const StyledPagination = styled(Pagination)`
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
   .ais-Pagination-list {
     list-style: none;
     display: flex;

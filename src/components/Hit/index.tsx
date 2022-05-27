@@ -44,6 +44,9 @@ export function Hit({ hit }: { hit: RestaurantHit }) {
             {hit.city}, {hit.state}
           </p>
         </FlexContainer>
+        <p>
+          {hit.food_type}, {hit.dining_style}
+        </p>
         <Footer>
           <p>{"$".repeat(hit.price)}</p>
           <StarRating count={hit.stars_count} />

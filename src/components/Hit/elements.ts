@@ -3,6 +3,16 @@ import { colors } from "../../theme";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { BsPinMap } from "react-icons/bs";
 
+export const DeleteIcon = styled(FaRegTrashAlt)`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: ${colors.light.red};
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.15s opacity ease-in-out;
+`;
+
 export const Article = styled.article<{ disabled: boolean }>`
   ${({ disabled }) =>
     disabled &&
@@ -21,6 +31,12 @@ export const Article = styled.article<{ disabled: boolean }>`
   .ais-Highlight-highlighted {
     background-color: ${colors.light.yellow};
     color: ${colors.light.green1};
+  }
+
+  &:hover {
+    ${DeleteIcon} {
+      opacity: 1;
+    }
   }
 `;
 
@@ -55,14 +71,6 @@ export const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-`;
-
-export const DeleteIcon = styled(FaRegTrashAlt)`
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  color: ${colors.light.red};
-  cursor: pointer;
 `;
 
 export const Footer = styled.div`

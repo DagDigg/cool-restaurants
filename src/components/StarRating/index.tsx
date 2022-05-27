@@ -5,9 +5,21 @@ export function StarRating({ count }: { count: number }) {
 
   return (
     <div style={{ display: "flex" }}>
-      {Array(stars.filled).fill(<StarFill />)}
-      {Array(stars.half).fill(<StarHalf />)}
-      {Array(stars.empty).fill(<StarEmpty />)}
+      {Array(stars.filled)
+        .fill(null)
+        .map((_, i) => (
+          <StarFill key={"fill_" + i} />
+        ))}
+      {Array(stars.half)
+        .fill(null)
+        .map((_, i) => (
+          <StarHalf key={"half_" + i} />
+        ))}
+      {Array(stars.empty)
+        .fill(null)
+        .map((_, i) => (
+          <StarEmpty key={"empty_" + i} />
+        ))}
     </div>
   );
 }
