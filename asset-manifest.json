@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/cool-restaurants/static/js/main.74e0ce6e.js",
+    "static/js/787.5c07e3c4.chunk.js": "/cool-restaurants/static/js/787.5c07e3c4.chunk.js",
+    "index.html": "/cool-restaurants/index.html",
+    "main.74e0ce6e.js.map": "/cool-restaurants/static/js/main.74e0ce6e.js.map",
+    "787.5c07e3c4.chunk.js.map": "/cool-restaurants/static/js/787.5c07e3c4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.74e0ce6e.js"
+  ]
+}
